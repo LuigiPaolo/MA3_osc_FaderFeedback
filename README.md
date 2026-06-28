@@ -31,7 +31,7 @@ A rock-solid, network-friendly Lua plugin for grandMA3 that bridges fader feedba
 4. **Important:** Disable all `Send`, `Send Cmd`, and `Send Executors` options in the OSC settings to prevent network flooding. Enable `Receive` and `Receive Cmd`.
 
 ### 2. Plugin Installation
-1. Download the latest release from the [Releases page](https://github.com/tuo-nome/tuo-repo/releases).
+1. Download the latest release from the [Releases page](https://github.com/LuigiPaolo/MA3_osc_FaderFeedback/releases).
 2. Load the `fader_feedback.lua` script into a plugin slot in your grandMA3 project.
 3. Edit the script and ensure the `osc_line` variable at the top matches your OSC line ID.
 
