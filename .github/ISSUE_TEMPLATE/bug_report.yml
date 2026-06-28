@@ -1,0 +1,44 @@
+name: Bug Report 🐞
+description: Segnala un malfunzionamento del plugin
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato il bug! Aiutaci a capire meglio cosa sta succedendo.
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione del problema
+      description: Descrivi cosa sta succedendo.
+      placeholder: Esempio - Il fader non ritorna a zero quando cambio pagina...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ma3-version
+    attributes:
+      label: Versione di grandMA3
+      options:
+        - 2.4.2
+        - 2.3.x
+        - Altra
+    validations:
+      required: true
+
+  - type: input
+    id: chataigne-version
+    attributes:
+      label: Versione di Chataigne
+      placeholder: 1.10.3
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log di sistema
+      description: Incolla qui eventuali errori visti nel System Monitor di MA3 o nel Logger di Chataigne.
+      render: text
