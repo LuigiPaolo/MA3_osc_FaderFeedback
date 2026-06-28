@@ -23,11 +23,25 @@ A rock-solid, network-friendly Lua plugin for grandMA3 that bridges fader feedba
 * **No Conflicts:** Bypasses MIDI single-client Windows limitations via OSC bridging.
 
 ## 🚀 Setup
-Detailed instructions on how to set up the OSC lines and Chataigne mappings can be found in the [Wiki/Documentation](link-to-docs-if-you-have-them) (or follow the standard installation steps below).
 
-1. **MA3 Config:** Disable all auto-sending in OSC settings.
-2. **Plugin:** Load the Lua script and set `osc_line` to your OSC output ID.
-3. **Chataigne:** Route OSC input to your MIDI controller Output.
+### 1. grandMA3 Configuration
+1. Go to `Menu > In/Out > OSC`.
+2. Configure a new line with `Destination IP` set to your local machine (e.g., `127.0.0.1` if Chataigne is on the same PC).
+3. Set `Destination Port` to `8001` (or the port Chataigne is listening on).
+4. **Important:** Disable all `Send`, `Send Cmd`, and `Send Executors` options in the OSC settings to prevent network flooding. Enable `Receive` and `Receive Cmd`.
+
+### 2. Plugin Installation
+1. Download the latest release from the [Releases page](https://github.com/tuo-nome/tuo-repo/releases).
+2. Load the `fader_feedback.lua` script into a plugin slot in your grandMA3 project.
+3. Edit the script and ensure the `osc_line` variable at the top matches your OSC line ID.
+
+### 3. Chataigne Mapping
+1. Create an OSC module in Chataigne listening on the selected port.
+2. The incoming OSC paths will be `/xtouch/fader/[1-8]` and `/xtouch/master`.
+3. Create a **Mapping** for each fader:
+   - **Input:** OSC module -> `/xtouch/fader/X`.
+   - **Output:** MIDI module -> `Send Control Change`.
+   - **Filter:** Add a `Remap` filter. Set **Input Min: 0** to **Input Max: 1** (OSC range) and **Output Min: 0** to **Output Max: 127** (MIDI range).
 
 ## 🤝 Contributing
 We welcome contributions! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a Pull Request.
