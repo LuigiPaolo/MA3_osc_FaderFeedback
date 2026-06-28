@@ -1,37 +1,37 @@
 name: Bug Report 🐞
-description: Segnala un malfunzionamento del plugin
+description: Report a malfunction of the plugin
 title: "[Bug]: "
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Grazie per aver segnalato il bug! Aiutaci a capire meglio cosa sta succedendo.
+        Thanks for reporting the bug! Please help us understand what is going wrong.
   
   - type: textarea
     id: description
     attributes:
-      label: Descrizione del problema
-      description: Descrivi cosa sta succedendo.
-      placeholder: Esempio - Il fader non ritorna a zero quando cambio pagina...
+      label: Problem Description
+      description: Describe what is happening.
+      placeholder: E.g., The fader does not return to zero when I change pages...
     validations:
       required: true
 
   - type: dropdown
     id: ma3-version
     attributes:
-      label: Versione di grandMA3
+      label: grandMA3 Version
       options:
         - 2.4.2
         - 2.3.x
-        - Altra
+        - Other
     validations:
       required: true
 
   - type: input
     id: chataigne-version
     attributes:
-      label: Versione di Chataigne
+      label: Chataigne Version
       placeholder: 1.10.3
     validations:
       required: true
@@ -39,6 +39,6 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Log di sistema
-      description: Incolla qui eventuali errori visti nel System Monitor di MA3 o nel Logger di Chataigne.
+      label: System Logs
+      description: Paste any errors seen in the MA3 System Monitor or Chataigne Logger here.
       render: text
