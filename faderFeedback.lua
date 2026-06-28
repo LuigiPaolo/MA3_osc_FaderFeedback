@@ -1,5 +1,7 @@
--- Plugin: Chataigne Fader Feedback v2.0 (Solo OSC, Delta Tracking, Ghost/Null Fix)
--- Fix implementato: Riconoscimento "esecutori fantasma" su pagine vuote
+-- Copyright (c) 2026 Luigi Paolo Favini
+-- Plugin: Chataigne Fader Feedback for grandMA3
+-- Licensed under the Apache License 2.0
+
 
 local osc_line = 1        -- La tua riga OSC
 local update_rate = 0.05  -- 20Hz, bilanciamento ottimale
