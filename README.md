@@ -1,7 +1,7 @@
 # grandMA3 to Chataigne OSC Fader Feedback
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)]()
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 A rock-solid, network-friendly Lua plugin for grandMA3 that bridges fader feedback to motorized MIDI controllers via Chataigne.
 
